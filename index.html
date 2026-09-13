@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=Fresh Whiteboy, initial-scale=1.0" />
+    <title>Barber Shop | Stay Fresh with Whiteboy</title>
+    <link rel="icon" type="image/x-icon" href="./icons/favicon.ico" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <style>
+      /* ================= HERO SECTION ================= */
+
+      .hero {
+        width: 100%;
+        min-height: 380px;
+        margin-top: 7.2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: var(--light-blue);
+        overflow: hidden;
+      }
+
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: clamp(2rem, 5vw, 6rem);
+        box-sizing: border-box;
+      }
+
+      .welcome-text {
+        color: var(--dark-blue);
+        font-size: clamp(12px, 1.2vw, 15px);
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        margin-bottom: 18px;
+      }
+
+      .welcome-text::before {
+        content: "";
+        display: inline-block;
+        width: clamp(30px, 4vw, 48px);
+        height: 4px;
+        background: var(--blue);
+        margin-right: 12px;
+        vertical-align: middle;
+      }
+
+      .hero-content > h1,
+      .hero-content > h2 {
+        margin: 0;
+        font-size: clamp(2.2rem, 5vw, 50px);
+        line-height: 1.05;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .hero-content > h1 {
+        color: var(--blue);
+      }
+
+      .hero-content > h2 {
+        color: var(--blue-theme);
+        margin-top: 0.5rem;
+      }
+
+      .hero-content > p {
+        max-width: 500px;
+        font-size: clamp(0.9rem, 1.5vw, 1rem);
+        line-height: 1.6;
+        margin: 1.5rem 0 2rem;
+        color: var(--gray);
+      }
+
+      /* ================= HERO IMAGE ================= */
+
+      .hero-image {
+        width: 100%;
+        min-height: 380px;
+
+        background:
+          linear-gradient(rgba(219, 65, 173, 0.08), rgba(8, 41, 87, 0.08)),
+          url("https://images.unsplash.com/photo-1621607505833-616916c46a25?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+            center center / cover no-repeat;
+      }
+
+      /* =================  HERO - RESPONSIVE TABLET ================= */
+
+      @media (max-width: 900px) {
+        .hero {
+          margin-top: 6rem;
+        }
+
+        .hero-content {
+          padding: 3rem;
+        }
+
+        .hero-content > h1,
+        .hero-content > h2 {
+          font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        .hero-image {
+          min-height: 350px;
+        }
+      }
+
+      /* =================  HERO - RESPONSIVE MOBILE ================= */
+
+      @media (max-width: 790px) {
+        .hero {
+          display: grid;
+          grid-template-columns: 1fr;
+
+          margin-top: 5rem;
+        }
+
+        /* Image first on mobile */
+        .hero-image {
+          order: 1;
+          width: 100%;
+          min-height: 320px;
+          background-position: center;
+        }
+
+        /* Content second */
+        .hero-content {
+          order: 2;
+
+          padding: 3rem 2rem;
+        }
+
+        .hero-content > h1,
+        .hero-content > h2 {
+          font-size: clamp(2.2rem, 9vw, 3rem);
+        }
+
+        .hero-content > p {
+          max-width: 600px;
+        }
+      }
+
+      /* ================= HERO - RESPONSIVE SMALL MOBILE ================= */
+
+      @media (max-width: 480px) {
+        .hero {
+          margin-top: 4rem;
+        }
+
+        .hero-image {
+          min-height: 260px;
+        }
+
+        .hero-content {
+          padding: 2.5rem 1.25rem;
+        }
+
+        .welcome-text {
+          font-size: 12px;
+          margin-bottom: 15px;
+        }
+
+        .welcome-text::before {
+          width: 28px;
+          height: 3px;
+          margin-right: 8px;
+        }
+
+        .hero-content > h1,
+        .hero-content > h2 {
+          font-size: clamp(2rem, 11vw, 2.6rem);
+        }
+
+        .hero-content > h2 {
+          margin-top: 0.3rem;
+        }
+
+        .hero-content > p {
+          font-size: 0.9rem;
+          line-height: 1.5;
+          margin: 1.25rem 0 1.5rem;
+        }
+      }
+
+      /* ================= HERO - RESPONSIVE VERY SMALL PHONES ================= */
+
+      @media (max-width: 360px) {
+        .hero-image {
+          min-height: 230px;
+        }
+
+        .hero-content {
+          padding: 2rem 1rem;
+        }
+
+        .hero-content > h1,
+        .hero-content > h2 {
+          font-size: 2rem;
+        }
+      }
+
+      /* =================  SERVICES SECTION ================= */
+
+      .services {
+        background: var(--light-gray);
+        padding: 65px 5% 75px;
+        text-align: center;
+        background-color: var(--white);
+      }
+
+      .section-label {
+        text-transform: uppercase;
+        color: var(--blue-theme);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .section-label::before,
+      .section-label::after {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 2px;
+        background: var(--blue-theme);
+        vertical-align: middle;
+        margin: 0 13px;
+      }
+      .services > h2 {
+        text-transform: uppercase;
+        font-size: 32px;
+        margin: 10px 0 8px;
+        color: var(--blue);
+      }
+      .services-intro {
+        color: var(--gray);
+        margin-bottom: 35px;
+      }
+      .services-grid {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 18px;
+      }
+      .services-card {
+        border: 1px solid #e5e9f0;
+        background-color: var(--light-gray);
+        padding: 30px 18px;
+        min-height: 190px;
+        transition: 0.3s;
+        box-shadow: 0 15px 35px rgba(31, 23, 73, 0.1);
+        border-color: var(--gray);
+      }
+
+      .services-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 15px 35px rgba(0, 50, 120, 0.1);
+        border-color: var(--blue);
+        background-color: var(--light-blue);
+      }
+
+      .service-card h3 {
+        font-size: 15px;
+        margin-bottom: 12px;
+      }
+
+      .services-card > p {
+        font-size: 13px;
+        color: var(--gray);
+      }
+
+      .service-icon > img {
+        height: 5.5rem;
+      }
+      .service-title {
+        color: var(--blue-theme);
+        text-transform: uppercase;
+      }
+      .service-price {
+        color: var(--blue);
+        font-size: 32px;
+        font-weight: 800;
+        margin-bottom: 15px;
+      }
+      .call-out-price {
+        color: var(--blue);
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+      .service-line {
+        width: 32px;
+        height: 2px;
+        background: var(--blue);
+        margin: 15px auto 0;
+      }
+
+      /* =================  ABOUT SECTION ================= */
+      .about {
+        padding: 4rem;
+        text-align: center;
+        background-color: var(--light-blue);
+      }
+      .about > h2 {
+        text-transform: uppercase;
+        font-size: 32px;
+        margin: 10px 0 8px;
+        color: var(--blue);
+      }
+
+      .about > p {
+        font-size: clamp(0.9rem, 1.5vw, 1rem);
+        line-height: 1.6;
+        margin: 1.5rem 0 2rem;
+        color: var(--gray);
+      }
+
+      /* =================  CONTACT SECTION ================= */
+
+      .contact {
+        text-align: center;
+        padding: 3rem;
+        background-color: var(--white);
+      }
+      .contact > h2 {
+        text-transform: uppercase;
+        font-size: 32px;
+        margin: 10px 0 8px;
+        color: var(--blue);
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .contact-map {
+        margin: 0.4rem;
+        border-radius: 8px;
+      }
+      .contact-map > iframe {
+        min-height: 450px;
+        width: 100%;
+        box-shadow: 0 15px 35px var(--dark-blue);
+        border-radius: 8px;
+      }
+
+      .contact-form {
+        margin: 0.4rem;
+        padding: 2rem;
+        border-radius: 8px;
+        background-color: var(--light-blue);
+      }
+
+      .contact-form > p {
+        padding: 0.3rem;
+        display: flex;
+        justify-content: flex-start;
+        color: var(--gray);
+      }
+
+      .contact-form-disclaimer {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+        color: var(--dark-blue);
+        font-weight: 400;
+      }
+      /* ================= RESPONSIVE CONTACT SECTION =================  */
+      @media (width <= 960px) {
+        .contact {
+          padding: 1rem;
+        }
+        .contact-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .contact-map {
+          order: 2;
+        }
+        .contact-map > iframe {
+          border-radius: 0px;
+          box-shadow: 0 15px 35px var(--white);
+        }
+
+        .contact-form {
+          margin: none;
+          order: 1;
+          border-radius: 0px;
+        }
+      }
+
+      /* ================= RESPONSIVE FORM =================  */
+
+      .responsive-form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input,
+      select {
+        height: 50px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      textarea {
+        height: 120px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      /* =================  BOOKINGS BOTTOM BANNER SECTION ================= */
+      .bookings {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem;
+        background-color: var(--light-blue);
+      }
+      .bookings > h2 {
+        padding: 1rem;
+        text-transform: uppercase;
+        font-size: 32px;
+        margin: 10px 0 8px;
+        color: var(--blue);
+      }
+
+      .bookings > p {
+        padding-bottom: 2rem;
+        color: var(--gray);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- -------------------- TOB BAR -------------------- -->
+    <section class="top-bar">
+      <div class="top-bar-outer">
+        <div class="outer-flex-item">
+          <div class="rounded-icons">
+            <img src="./icons/phone-icon.svg" alt="" />
+          </div>
+          <p>069-463-8214</p>
+        </div>
+        <div class="outer-flex-item">
+          <div class="rounded-icons">
+            <img src="./icons/email-icon.svg" alt="" />
+          </div>
+          <p>whiteboyt7@gmail.com</p>
+        </div>
+        <div class="outer-flex-item">
+          <div class="rounded-icons">
+            <img src="./icons/location-icon.svg" alt="location-icon" />
+          </div>
+          <p>62 Mustang way, Westridge, Mitchells Plain</p>
+        </div>
+      </div>
+      <div class="top-bar-inner">
+        <div class="rounded-icons">
+          <img src="./icons/facebook-icon.svg" alt="facebook-icon" />
+        </div>
+        <div class="rounded-icons">
+          <img src="./icons/instagram-icon.svg" alt="instagram-icon" />
+        </div>
+        <div class="rounded-icons">
+          <img src="./icons/whatsapp-icon.svg" alt="instagram-icon" />
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------- NAVIGATION -------------------- -->
+    <section id="header"></section>
+
+    <!-- -------------------- HERO -------------------- -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="welcome-text">Welcome to "Stay Fresh with Whiteboy"</div>
+        <h1>Look Fresh.</h1>
+        <h2>Feel Confident.</h2>
+        <p>
+          Premium haircuts and grooming services designed for the modern man.
+        </p>
+        <a href="#bookings">
+          <button class="btn-tp-1 flex-calendar-icon">
+            <img src="/website/icons/calendar-icon.svg" alt="calendar-icon" />
+            <p>Book Appointment</p>
+          </button>
+        </a>
+      </div>
+      <div class="hero-image"></div>
+    </section>
+
+    <!-- -------------------- SERVICES -------------------- -->
+    <section class="services" id="services">
+      <div class="section-label">What We offer</div>
+      <h2>Our Services</h2>
+      <div class="services-intro">
+        Quality grooming services tailored to your style.
+      </div>
+
+      <div class="services-grid">
+        <div class="services-card">
+          <div class="service-icon image-1">
+            <img src="./icons/fader.png" alt="" srcset="" />
+          </div>
+          <h3 class="service-title">★ Fader</h3>
+          <div class="service-price">R 80</div>
+          <p>Hot towel shaves for the ultimate smooth finish.</p>
+          <div class="service-line"></div>
+        </div>
+        <div class="services-card">
+          <div class="service-icon">
+            <img src="./icons/beard-trim-icon.png" alt="" srcset="" />
+          </div>
+          <h3 class="service-title">★ Beard Trim</h3>
+          <div class="service-price">R 20</div>
+          <p>Hot towel shaves for the ultimate smooth finish.</p>
+          <div class="service-line"></div>
+        </div>
+        <div class="services-card">
+          <div class="service-icon">
+            <img src="./icons/blade-fader-icon.png" alt="" srcset="" />
+          </div>
+          <h3 class="service-title">★ Blade Fader</h3>
+          <div class="service-price">R 100</div>
+          <p>Hot towel shaves for the ultimate smooth finish.</p>
+          <div class="service-line"></div>
+        </div>
+        <div class="services-card">
+          <div class="service-icon">
+            <img src="./icons/straight-cut-icon.png" alt="" srcset="" />
+          </div>
+          <h3 class="service-title">★ Straight Cut</h3>
+          <div class="service-price">R 60</div>
+          <p>Hot towel shaves for the ultimate smooth finish.</p>
+          <div class="service-line"></div>
+        </div>
+        <div class="services-card">
+          <div class="service-icon">
+            <img src="./icons/call-out-service.png" alt="" srcset="" />
+          </div>
+          <h3 class="service-title">★ Call-out Cuts</h3>
+          <div class="service-price">R 70</div>
+          <em class="call-out-price">R 20 (Westridge area)</em>
+          <p>Hot towel shaves for the ultimate smooth finish.</p>
+          <div class="service-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------- ABOUT -------------------- -->
+    <section class="about" id="about">
+      <div class="section-label">Who we are</div>
+      <h2>About Us</h2>
+      <p>EST in the 2005</p>
+      <p>
+        Sit back and relax while we make you feel fresh.<br />
+        With over 20 years of experience, at
+        <em style="color: #00a0de">"Stay Fresh with Whiteboy" </em> every cut is
+        tailored to suit your style.
+      </p>
+    </section>
+
+    <!-- -------------------- CONTACT  -------------------- -->
+    <section class="contact" id="contact">
+      <div class="section-label">Get in touch</div>
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.506365403057!2d18.59618457571667!3d-34.056531573155425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc46143db3fe89%3A0x16429d4fbd16965!2s62%20Mustang%20Way%2C%20Westridge%2C%20Cape%20Town%2C%207802!5e0!3m2!1sen!2sza!4v1789248679611!5m2!1sen!2sza"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+        <div class="contact-form">
+          <div class="responsive-form">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input
+                type="hidden"
+                name="access_key"
+                value="650f4ca2-2f46-41f9-9456-42963db00d62"
+              />
+              <input
+                type="hidden"
+                name="redirect"
+                value="https://armel-nzawou-developer.github.io/International-English-Academy/message-sent-successfully.html"
+              />
+              <!-- redirect to thank you page -->
+              <input
+                type="hidden"
+                name="subject"
+                value="WhiteBoy - Inquiries"
+              />
+              <!-- email Subject  -->
+
+              <!-- Input for first name -->
+              <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                placeholder=" Your first name..."
+                required
+              />
+
+              <!-- Input for last name -->
+              <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                placeholder=" Your last name..."
+                required
+              />
+
+              <!-- Input for email-->
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder=" Your email adress..."
+                required
+              />
+
+              <!-- Select tag for diffrent options -->
+              <select id="inquiry" name="inquiry">
+                <option value="">Reason for contacting</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Cancellation">Cancellation</option>
+                <option value="Call out">Call-out Cuts</option>
+                <option value="Services offered">Services offered</option>
+                <option value="Quote request">Quote request</option>
+              </select>
+
+              <!-- Textarea for Message -->
+              <textarea
+                name="Message"
+                placeholder=" Your Inquiry..."
+                required
+              ></textarea>
+              <!-- Submit Button -->
+              <div>
+                <button class="btn-tp-1" type="submit" value="submit">
+                  Submit
+                </button>
+              </div>
+              <div class="contact-form-disclaimer">
+                By submitting, you agree to be contacted regarding your inquiry.
+                ✅
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------- BOOKINGS -------------------- -->
+    <section class="bookings" id="bookings">
+      <div class="section-label">Make a booking</div>
+      <h2>✅ Ready For a Fresh Look?</h2>
+      <p>Book your appointment today and leave looking sharp.</p>
+      <a target="_blank" href="./bookings.html">
+        <button class="btn-tp-1 flex-calendar-icon">
+          <img src="/website/icons/calendar-icon.svg" alt="calendar-icon" />
+          <p>Book Now</p>
+        </button>
+      </a>
+    </section>
+
+    <!-- -------------------- FOOTER -------------------- -->
+    <section id="footer"></section>
+
+    <script src="/website/js/headerFooter.js"></script>
+  </body>
+</html>

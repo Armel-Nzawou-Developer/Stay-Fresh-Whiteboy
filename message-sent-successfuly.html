@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stay Fresh With Whiteboy | Thank You for contacting !</title>
+    <link rel="icon" type="image/png" href="./icons/favicon.ico" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #00a0de, #eef5ff);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .thankyou-card {
+        margin: 25px 25px;
+        background: var(--blue-theme);
+        border-radius: 12px;
+        box-shadow: 0 8px 20px var(--white);
+        padding: 40px;
+        text-align: center;
+        max-width: 400px;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .thankyou-card h1 {
+        font-size: 28px;
+        margin: 0;
+        color: var(--light-gray);
+      }
+      .thankyou-card p {
+        margin-bottom: 25px;
+        font-size: 16px;
+        margin-top: 10px;
+        color: var(--light-gray);
+      }
+      .thankyou-card a {
+        font-weight: 700;
+        font-size:medium;
+        color: var(--white);
+        margin-top: 20px;
+        text-decoration: none;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .card-image > img {
+        margin: 10px;
+        height: 80px;
+        animation: fadeIn 2s ease-in-out;
+      }
+      .btn-tp-1.btn-style{
+        box-shadow: 0 8px 20px var(--dark-blue);
+    }
+    </style>
+  </head>
+  <body>
+    <div class="thankyou-card ">
+      <div class="card-image">
+        <img
+          src="./icons/sent-message-icon.svg"
+          alt="sent-messge-icon"
+        />
+      </div>
+      <h1>Thank You!</h1>
+      <p>
+        Your message was submitted successfully! 
+      </p>
+        <a class="btn-tp-1 btn-style" href="./index.html"> ← Go Back</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+/*  Global styles (RESET, colors, typography, layout)================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
+
+:root {
+  --blue-theme: #00a0de; 
+  --blue: #0755c9;
+  --dark-blue: #10264b;
+  --light-blue: #eef5ff;
+  --white: #ffffff;
+  --gray: #667085;
+  --light-gray: #f7f9fc;
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+
+section {
+  /* Adjust the pixels to match the exact section clicked on , on the nav bar */
+  scroll-margin-top: 120px; 
+}
