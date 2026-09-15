@@ -84,7 +84,40 @@
     <section id="top-bar"></section>
 
     <!-- -------------------- NAVIGATION -------------------- -->
-    <section id="header"></section>
+    <section class="navbar">
+  <div class="outter-nav">
+    <a href="./index.html"> <img src="./images/logo.png" alt="logo-image" /></a>
+  </div>
+  <!-- hamburger navigation -->
+  <div class="hamburger">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+    <div class="inner-nav">
+      <div class="inner-nav-item">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="inner-nav-item">
+        <a href="index.html#services">Services</a>
+      </div>
+      <div class="inner-nav-item">
+        <a href="index.html#about">About</a>
+      </div>
+      <div class="inner-nav-item">
+        <a href="index.html#contact">Contact </a>
+      </div>
+      <div class="inner-nav-item">
+        <a  href="./bookings.html">
+          <button class="btn-tp-1 flex-calendar-icon">
+            <img src="./icons/calendar-icon.svg" alt="calendar-icon" />
+            <p>Book Appointment</p>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- -------------------- RESERVATION SECTION -------------------- -->
     <section class="reservation">
@@ -120,7 +153,85 @@
 
 
     <!-- -------------------- FOOTER -------------------- -->
-    <section id="footer"></section>
+
+    <section class="footer">
+      <div class="footer-list">
+        <ul class="footer-item">
+          <li>
+            <a class="logo-footer" href="#"
+              ><img src="./images/logo-footer.png" alt="logo-footer" 
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-list">
+        <ul class="footer-item">
+          <li><h2>Quick Links</h2></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html#services">Services</a></li>
+          <li><a href="./index.html#about">About</a></li>
+          <li><a href="./index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-list">
+        <ul class="footer-item">
+          <li><h2>Customer Care</h2></li>
+          <li><a target="_blank" href="./bookings.html">Make a booking </a></li>
+          <li>
+            <a
+              href="./terms-and-conditions/Whiteboy Babershop - Terms and Conditions.pdf"
+              >Terms & Conditions</a
+            >
+          </li>
+          <li>
+            <a target="_blank" href="https://armeldesign-solutions.web.app/">
+              <span style="color: #bd9c78">Design by ArmelDesign ★</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-list">
+        <ul class="footer-item">
+          <li><h2>Follow Us</h2></li>
+          <li>
+            <div class="top-bar-inner">
+              <div>
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><img
+                    class="rounded-icons"
+                    src="./icons/facebook-icon.svg"
+                    alt="facebook-icon"
+                /></a>
+              </div>
+              <div>
+                <a href="https://www.instagram.com/?hl=en" target="_blank"
+                  ><img
+                    class="rounded-icons"
+                    src="./icons/instagram-icon.svg"
+                    alt="instagram-icon"
+                /></a>
+              </div>
+              <div>
+                <a
+                  href="https://wa.me/27694638214?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment."
+                  target="_blank"
+                  ><img
+                    class="rounded-icons"
+                    src="./icons/whatsapp-icon.svg"
+                    alt="whatsapp-icon"
+                /></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-list">
+        <ul class="footer-item">
+          <li>© Since 2026</li>
+          <li>All Rights Reserved.</li>
+        </ul>
+      </div>
+    </section>
 
     <script src="./js/topNavFooter.js"></script>
   </body>
